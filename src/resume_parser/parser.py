@@ -8,6 +8,9 @@ to extract text from various file formats.
 from pathlib import Path
 from typing import Dict, Optional
 import logging
+import fitz  # PyMuPDF
+import docx
+import pdfplumber
 
 logger = logging.getLogger(__name__)
 
@@ -48,17 +51,34 @@ class ResumeParser:
 
         logger.info(f"Parsing resume: {file_path.name}")
 
-        # TODO: Implement actual parsing logic
-        # This is a placeholder that will be implemented in the next phase
-        return {
-            "file_name": file_path.name,
-            "raw_text": "",
-            "status": "pending_implementation"
-        }
+        try:
+            # Extract text based on file type
+            if file_extension == '.pdf':
+                raw_text = self.parse_pdf(file_path)
+            elif file_extension in ['.docx', '.doc']:
+                raw_text = self.parse_docx(file_path)
+            else:
+                raw_text = ""
+
+            return {
+                "file_name": file_path.name,
+                "raw_text": raw_text,
+                "status": "success",
+                "text_length": len(raw_text)
+            }
+
+        except Exception as e:
+            logger.error(f"Error parsing resume {file_path.name}: {e}")
+            return {
+                "file_name": file_path.name,
+                "raw_text": "",
+                "status": "error",
+                "error": str(e)
+            }
 
     def parse_pdf(self, file_path: Path) -> str:
         """
-        Parse PDF resume file.
+        Parse PDF resume file using PyMuPDF and pdfplumber.
 
         Args:
             file_path: Path to PDF file
@@ -66,12 +86,35 @@ class ResumeParser:
         Returns:
             Extracted text content
         """
-        # TODO: Implement PDF parsing using PyMuPDF or pdfminer
-        pass
+        text = ""
+
+        try:
+            # Try PyMuPDF first (faster)
+            doc = fitz.open(file_path)
+            for page in doc:
+                text += page.get_text()
+            doc.close()
+
+            # If PyMuPDF didn't extract much text, try pdfplumber
+            if len(text.strip()) < 100:
+                logger.info(f"PyMuPDF extracted little text, trying pdfplumber for {file_path.name}")
+                text = ""
+                with pdfplumber.open(file_path) as pdf:
+                    for page in pdf.pages:
+                        page_text = page.extract_text()
+                        if page_text:
+                            text += page_text + "\n"
+
+            logger.info(f"Extracted {len(text)} characters from PDF: {file_path.name}")
+            return text.strip()
+
+        except Exception as e:
+            logger.error(f"Error parsing PDF {file_path.name}: {e}")
+            raise
 
     def parse_docx(self, file_path: Path) -> str:
         """
-        Parse DOCX resume file.
+        Parse DOCX resume file using python-docx.
 
         Args:
             file_path: Path to DOCX file
@@ -79,5 +122,24 @@ class ResumeParser:
         Returns:
             Extracted text content
         """
-        # TODO: Implement DOCX parsing using python-docx
-        pass
+        try:
+            doc = docx.Document(file_path)
+            text = ""
+
+            # Extract text from paragraphs
+            for paragraph in doc.paragraphs:
+                text += paragraph.text + "\n"
+
+            # Extract text from tables
+            for table in doc.tables:
+                for row in table.rows:
+                    for cell in row.cells:
+                        text += cell.text + " "
+                text += "\n"
+
+            logger.info(f"Extracted {len(text)} characters from DOCX: {file_path.name}")
+            return text.strip()
+
+        except Exception as e:
+            logger.error(f"Error parsing DOCX {file_path.name}: {e}")
+            raise

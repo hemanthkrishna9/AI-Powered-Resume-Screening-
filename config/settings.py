@@ -36,11 +36,31 @@ class Settings:
         "DATABASE_URL", f"sqlite:///{BASE_DIR}/resume_screening.db"
     )
 
-    # AI/ML
+    # AI/ML - Provider Selection
+    AI_PROVIDER: str = os.getenv("AI_PROVIDER", "azure")  # azure, openai, or local
+
+    # Azure OpenAI
+    AZURE_OPENAI_ENABLED: bool = os.getenv("AZURE_OPENAI_ENABLED", "True").lower() == "true"
+    AZURE_OPENAI_ENDPOINT: str = os.getenv("AZURE_OPENAI_ENDPOINT", "")
+    AZURE_OPENAI_API_KEY: str = os.getenv("AZURE_OPENAI_API_KEY", "")
+    AZURE_OPENAI_API_VERSION: str = os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-01")
+
+    # Azure OpenAI - Embeddings
+    AZURE_EMBEDDING_DEPLOYMENT: str = os.getenv("AZURE_EMBEDDING_DEPLOYMENT", "text-embedding-3-large")
+    AZURE_EMBEDDING_MODEL: str = os.getenv("AZURE_EMBEDDING_MODEL", "text-embedding-3-large")
+    AZURE_EMBEDDING_DIMENSION: int = int(os.getenv("AZURE_EMBEDDING_DIMENSION", "3072"))
+
+    # Azure OpenAI - GPT
+    AZURE_GPT_DEPLOYMENT: str = os.getenv("AZURE_GPT_DEPLOYMENT", "gpt-4o-mini")
+    AZURE_GPT_MODEL: str = os.getenv("AZURE_GPT_MODEL", "gpt-4o-mini")
+    AZURE_GPT_API_VERSION: str = os.getenv("AZURE_GPT_API_VERSION", "2024-12-01-preview")
+
+    # Local Models (Fallback)
     EMBEDDING_MODEL: str = os.getenv(
         "EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
     )
     VECTOR_DB_PATH: Path = Path(os.getenv("VECTOR_DB_PATH", f"{BASE_DIR}/data/vector_db"))
+    VECTOR_DB_DIMENSION: int = int(os.getenv("VECTOR_DB_DIMENSION", "3072"))
     SPACY_MODEL: str = os.getenv("SPACY_MODEL", "en_core_web_sm")
     MIN_MATCH_SCORE: float = float(os.getenv("MIN_MATCH_SCORE", "0.5"))
     TOP_CANDIDATES_COUNT: int = int(os.getenv("TOP_CANDIDATES_COUNT", "10"))
