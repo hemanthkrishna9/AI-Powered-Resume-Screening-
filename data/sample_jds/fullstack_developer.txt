@@ -1,0 +1,47 @@
+Full Stack Developer (React + Node.js)
+
+ITC Infotech is hiring Full Stack Developers for exciting web application projects.
+
+Job Description:
+We need versatile developers who can handle both frontend and backend development. You'll build modern, responsive web applications using React on the frontend and Node.js on the backend.
+
+Key Responsibilities:
+- Develop responsive web applications using React
+- Build scalable backend APIs using Node.js and Express
+- Design and implement database schemas
+- Integrate third-party APIs and services
+- Ensure application performance and security
+- Write automated tests
+- Participate in agile development process
+
+Required Skills:
+- JavaScript/TypeScript
+- React.js (Hooks, Redux, Context API)
+- Node.js and Express.js
+- MongoDB or PostgreSQL
+- RESTful API design
+- HTML5, CSS3, responsive design
+- Git version control
+- Jest or Mocha for testing
+
+Preferred Skills:
+- Next.js or Gatsby
+- GraphQL
+- Docker
+- AWS or Azure deployment
+- CI/CD pipelines
+- Webpack/Vite
+- Material-UI or Tailwind CSS
+- Microservices architecture
+
+Qualifications:
+- Bachelor's degree in Computer Science or equivalent
+- 3+ years of full stack development experience
+- Strong understanding of web fundamentals
+- Experience with agile methodologies
+- Good problem-solving skills
+
+Location: Mumbai / Remote
+Experience: 3-5 years
+Job Type: Full-time
+Salary: Competitive package with benefits

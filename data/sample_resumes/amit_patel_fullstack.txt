@@ -1,0 +1,75 @@
+AMIT PATEL
+Full Stack Developer
+
+Email: amit.patel@email.com
+Phone: +91-9123456789
+LinkedIn: linkedin.com/in/amitpatel-dev
+GitHub: github.com/amitpatel
+Location: Mumbai, India
+
+PROFESSIONAL SUMMARY
+Versatile Full Stack Developer with 4+ years of experience building modern web applications using React, Node.js, and cloud technologies. Passionate about creating intuitive user interfaces and scalable backend systems. Strong collaborator with excellent problem-solving skills.
+
+TECHNICAL SKILLS
+Frontend: React.js, Next.js, Redux, TypeScript, HTML5, CSS3, Tailwind CSS, Material-UI
+Backend: Node.js, Express.js, GraphQL, RESTful APIs
+Databases: MongoDB, PostgreSQL, Redis
+Cloud & DevOps: AWS (S3, EC2, Lambda), Docker, GitHub Actions, CI/CD
+Testing: Jest, React Testing Library, Mocha, Chai
+Tools: Git, Webpack, Vite, npm, Postman
+Others: Responsive Design, Microservices, Agile/Scrum
+
+PROFESSIONAL EXPERIENCE
+
+Full Stack Developer | WebTech Solutions | Mumbai
+April 2021 - Present
+- Developed responsive web applications using React and TypeScript
+- Built RESTful APIs using Node.js and Express serving 100K+ users
+- Implemented real-time features using WebSockets
+- Integrated payment gateways (Razorpay, Stripe)
+- Optimized application performance improving load time by 45%
+- Deployed applications on AWS using EC2 and S3
+- Technologies: React, Node.js, MongoDB, AWS, Docker
+
+Frontend Developer | Digital Creatives | Pune
+June 2019 - March 2021
+- Created pixel-perfect UI components using React and Material-UI
+- Implemented state management using Redux and Context API
+- Collaborated with designers to implement responsive designs
+- Wrote unit tests achieving 80% code coverage
+- Technologies: React, Redux, JavaScript, CSS3, Jest
+
+Junior Web Developer | StartupHub | Mumbai
+July 2018 - May 2019
+- Developed frontend features using HTML, CSS, and JavaScript
+- Assisted in backend development using Node.js
+- Fixed bugs and improved application performance
+- Technologies: HTML, CSS, JavaScript, Node.js, MongoDB
+
+EDUCATION
+Bachelor of Engineering in Information Technology
+University of Mumbai
+2014 - 2018 | CGPA: 8.2/10
+
+CERTIFICATIONS
+- Full Stack Web Development (Udemy)
+- React - The Complete Guide (Udemy)
+- AWS Certified Cloud Practitioner
+- Node.js Certification
+
+PROJECTS
+E-Commerce Platform: Built full-featured online store with cart, payment, and admin panel
+Social Media App: Real-time chat application with 10K+ active users
+Portfolio CMS: Headless CMS using Next.js and Strapi
+Task Management Tool: Collaborative tool with drag-drop interface
+
+ACHIEVEMENTS
+- Improved website performance by 45% through code optimization
+- Successfully launched 5+ production applications
+- Mentored 2 junior developers
+- Employee of the Month (March 2023)
+
+LANGUAGES
+- English (Fluent)
+- Hindi (Native)
+- Gujarati (Native)

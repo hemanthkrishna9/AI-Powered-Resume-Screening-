@@ -1,0 +1,47 @@
+Senior Python Developer
+
+ITC Infotech is seeking an experienced Senior Python Developer to join our engineering team.
+
+Job Description:
+We are looking for a talented Python developer with strong experience in building scalable web applications and APIs. You will work on cutting-edge projects involving AI/ML integration, cloud services, and microservices architecture.
+
+Key Responsibilities:
+- Design and develop high-quality Python applications
+- Build RESTful APIs using FastAPI or Django
+- Implement AI/ML solutions using modern frameworks
+- Deploy and maintain applications on cloud platforms
+- Collaborate with cross-functional teams
+- Write clean, maintainable, and well-documented code
+- Participate in code reviews and mentor junior developers
+
+Required Skills:
+- Python (5+ years experience)
+- FastAPI or Django
+- PostgreSQL or MySQL
+- Docker and Kubernetes
+- AWS or Azure
+- Git and CI/CD pipelines
+- RESTful API design
+- Unit testing and TDD
+
+Preferred Skills:
+- Machine Learning (TensorFlow, PyTorch, or scikit-learn)
+- Microservices architecture
+- Redis or RabbitMQ
+- React or Angular (basic knowledge)
+- Agile/Scrum methodology
+
+Qualifications:
+- Bachelor's degree in Computer Science or related field
+- 5+ years of professional Python development experience
+- Strong problem-solving and analytical skills
+- Excellent communication skills
+- Experience working in agile teams
+
+Location: Bangalore / Remote
+Experience: 5-8 years
+Job Type: Full-time
+Salary: Competitive based on experience
+
+About ITC Infotech:
+ITC Infotech is a leading global technology services company, providing innovative solutions to clients worldwide.

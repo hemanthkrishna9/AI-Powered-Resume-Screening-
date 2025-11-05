@@ -1,0 +1,72 @@
+VIKRAM SINGH
+DevOps Engineer / Backend Developer
+
+Email: vikram.singh@email.com
+Phone: +91-9876512340
+LinkedIn: linkedin.com/in/vikramsingh
+GitHub: github.com/vikramsingh
+Location: Gurgaon, India
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 6 years of experience in CI/CD, cloud infrastructure, and backend development. Expertise in Kubernetes, Docker, Jenkins, and Java. Strong focus on automation, scalability, and reliability.
+
+TECHNICAL SKILLS
+Programming: Java, Python, Bash, Groovy
+DevOps Tools: Docker, Kubernetes, Jenkins, Terraform, Ansible
+Cloud: AWS (EC2, ECS, S3, CloudFormation), Azure (basics)
+Monitoring: Prometheus, Grafana, ELK Stack
+Databases: MySQL, PostgreSQL, MongoDB
+Web: Spring Boot, REST APIs
+Version Control: Git, GitLab CI/CD
+
+PROFESSIONAL EXPERIENCE
+
+DevOps Engineer | CloudOps India | Gurgaon
+March 2020 - Present
+- Managed Kubernetes clusters serving 500K+ users
+- Built CI/CD pipelines using Jenkins and GitLab
+- Automated infrastructure provisioning using Terraform
+- Implemented monitoring using Prometheus and Grafana
+- Reduced deployment time by 60% through automation
+- Technologies: Kubernetes, Docker, Jenkins, AWS, Terraform
+
+Backend Developer | Enterprise Solutions | Delhi
+July 2017 - February 2020
+- Developed microservices using Spring Boot and Java
+- Created RESTful APIs for enterprise applications
+- Implemented caching using Redis
+- Worked on database optimization
+- Technologies: Java, Spring Boot, MySQL, Redis, Docker
+
+Junior Developer | IT Services Corp | Noida
+June 2016 - June 2017
+- Developed Java applications
+- Assisted in deployment activities
+- Wrote automation scripts
+- Technologies: Java, MySQL, Linux
+
+EDUCATION
+Bachelor of Technology in Computer Science
+Delhi Technological University
+2012 - 2016 | CGPA: 8.0/10
+
+CERTIFICATIONS
+- Certified Kubernetes Administrator (CKA)
+- AWS Certified Solutions Architect
+- Docker Certified Associate
+- Jenkins Certification
+
+PROJECTS
+Kubernetes Auto-scaling: Implemented HPA and VPA for optimal resource usage
+CI/CD Pipeline: Jenkins pipeline reducing deployment time from 2 hours to 15 minutes
+Infrastructure as Code: Terraform modules for AWS infrastructure
+Monitoring Stack: Complete observability solution using Prometheus, Grafana, and ELK
+
+ACHIEVEMENTS
+- Reduced infrastructure costs by 40% through optimization
+- Achieved 99.99% uptime for production systems
+- Automated 80% of manual deployment tasks
+
+LANGUAGES
+- English (Fluent)
+- Hindi (Native)

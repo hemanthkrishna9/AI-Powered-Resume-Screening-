@@ -1,0 +1,73 @@
+RAJESH KUMAR
+Senior Python Developer
+
+Email: rajesh.kumar@email.com
+Phone: +91-9876543210
+LinkedIn: linkedin.com/in/rajeshkumar
+GitHub: github.com/rajeshkumar
+Location: Bangalore, India
+
+PROFESSIONAL SUMMARY
+Highly skilled Senior Python Developer with 7+ years of experience in designing and developing scalable web applications, RESTful APIs, and cloud-based solutions. Expertise in Python, FastAPI, Django, AWS, and microservices architecture. Proven track record of delivering high-quality software solutions in agile environments.
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, SQL
+Web Frameworks: FastAPI, Django, Flask
+Databases: PostgreSQL, MySQL, MongoDB, Redis
+Cloud & DevOps: AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, Jenkins
+ML/AI: TensorFlow, scikit-learn, Pandas, NumPy
+Tools: Git, CI/CD, Nginx, RabbitMQ
+Testing: Pytest, unittest, TDD
+
+PROFESSIONAL EXPERIENCE
+
+Senior Python Developer | Tech Innovations Pvt Ltd | Bangalore
+June 2020 - Present
+- Architected and developed microservices-based applications using FastAPI and Docker
+- Built RESTful APIs serving 1M+ requests daily with 99.9% uptime
+- Implemented ML-based recommendation system using scikit-learn
+- Led a team of 4 developers in agile sprints
+- Reduced API response time by 40% through optimization and caching
+- Deployed applications on AWS using ECS and Lambda
+- Technologies: Python, FastAPI, PostgreSQL, Docker, AWS, Redis
+
+Python Developer | Digital Solutions Inc | Bangalore
+March 2018 - May 2020
+- Developed Django-based web applications for e-commerce clients
+- Created automated data pipelines using Celery and RabbitMQ
+- Integrated third-party payment gateways and APIs
+- Wrote comprehensive unit tests achieving 85% code coverage
+- Technologies: Python, Django, MySQL, Celery, Docker
+
+Junior Python Developer | StartupXYZ | Bangalore
+July 2016 - February 2018
+- Developed backend APIs using Flask framework
+- Worked on data processing scripts and automation tools
+- Collaborated with frontend team for API integration
+- Technologies: Python, Flask, MongoDB, Git
+
+EDUCATION
+Bachelor of Technology in Computer Science
+National Institute of Technology (NIT), Trichy
+2012 - 2016 | CGPA: 8.5/10
+
+CERTIFICATIONS
+- AWS Certified Solutions Architect - Associate
+- Python for Data Science (Coursera)
+- Docker and Kubernetes Certification
+
+PROJECTS
+E-Commerce Platform: Built scalable backend using FastAPI, PostgreSQL, handling 50K+ daily users
+ML Recommendation Engine: Developed product recommendation system with 85% accuracy
+Real-time Analytics Dashboard: Created data pipeline processing 10M+ events/day
+
+ACHIEVEMENTS
+- Reduced infrastructure costs by 30% through AWS optimization
+- Improved application performance by 40%
+- Mentored 5 junior developers
+- Recipient of 'Best Developer Award' 2022
+
+LANGUAGES
+- English (Fluent)
+- Hindi (Native)
+- Kannada (Intermediate)

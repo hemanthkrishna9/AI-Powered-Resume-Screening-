@@ -1,0 +1,45 @@
+Data Scientist - AI/ML
+
+ITC Infotech is looking for a talented Data Scientist to drive AI/ML initiatives.
+
+Job Description:
+Join our Data Science team to build intelligent solutions using advanced machine learning and deep learning techniques. You will work on real-world business problems involving NLP, computer vision, and predictive analytics.
+
+Key Responsibilities:
+- Develop machine learning models for business applications
+- Perform exploratory data analysis and feature engineering
+- Build NLP solutions for text analytics
+- Deploy ML models to production environments
+- Create data visualizations and insights dashboards
+- Collaborate with product and engineering teams
+- Research and implement state-of-the-art ML algorithms
+
+Required Skills:
+- Python (NumPy, Pandas, scikit-learn)
+- Machine Learning and Deep Learning
+- TensorFlow or PyTorch
+- SQL and data manipulation
+- Statistical analysis
+- Data visualization (Matplotlib, Seaborn, Plotly)
+- NLP techniques
+- Model deployment and MLOps
+
+Preferred Skills:
+- Computer Vision (OpenCV, CNN)
+- Big Data tools (Spark, Hadoop)
+- Cloud ML services (AWS SageMaker, Azure ML)
+- Docker and Kubernetes
+- A/B testing and experimentation
+- Research publications or Kaggle experience
+
+Qualifications:
+- Master's or PhD in Computer Science, Statistics, or related field
+- 3+ years of hands-on ML/DS experience
+- Strong mathematical and statistical foundation
+- Experience with large-scale datasets
+- Proven track record of delivering ML projects
+
+Location: Bangalore / Hyderabad
+Experience: 3-6 years
+Job Type: Full-time
+Salary: Best in industry

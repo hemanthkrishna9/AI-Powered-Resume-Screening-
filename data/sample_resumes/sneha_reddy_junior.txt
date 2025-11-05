@@ -1,0 +1,60 @@
+SNEHA REDDY
+Junior Software Developer
+
+Email: sneha.reddy@email.com
+Phone: +91-9988776655
+LinkedIn: linkedin.com/in/snehareddy
+GitHub: github.com/snehareddy
+Location: Bangalore, India
+
+PROFESSIONAL SUMMARY
+Motivated Junior Software Developer with 1.5 years of experience in Python and web development. Quick learner with strong fundamentals in programming and databases. Seeking opportunities to grow and contribute to challenging projects.
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, Java
+Web Technologies: HTML, CSS, Flask, Bootstrap
+Databases: MySQL, SQLite
+Tools: Git, VS Code, Postman
+Others: Linux, Basic AWS knowledge
+
+PROFESSIONAL EXPERIENCE
+
+Junior Software Developer | CodeCraft Solutions | Bangalore
+January 2023 - Present
+- Developed backend APIs using Flask framework
+- Worked on database design and queries using MySQL
+- Fixed bugs and implemented new features
+- Participated in code reviews and daily standups
+- Technologies: Python, Flask, MySQL, Git
+
+Software Developer Intern | TechStart | Bangalore
+June 2022 - December 2022
+- Assisted in developing web applications
+- Wrote Python scripts for data processing
+- Created simple REST APIs
+- Learned Git version control and agile practices
+- Technologies: Python, HTML, CSS, JavaScript
+
+EDUCATION
+Bachelor of Technology in Computer Science
+VIT University, Vellore
+2018 - 2022 | CGPA: 7.8/10
+
+CERTIFICATIONS
+- Python for Everybody (Coursera)
+- Introduction to Web Development (Udemy)
+
+PROJECTS
+Student Management System: Flask-based web app with CRUD operations
+Weather App: Python application using OpenWeather API
+Personal Blog: Simple blog website using HTML, CSS, and JavaScript
+
+ACHIEVEMENTS
+- Completed 6-month internship successfully
+- Built 3 personal projects
+- Active participant in college coding competitions
+
+LANGUAGES
+- English (Fluent)
+- Hindi (Fluent)
+- Telugu (Native)
