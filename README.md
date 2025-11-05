@@ -16,9 +16,11 @@
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
+- [Azure Deployment](#azure-deployment)
 - [API Documentation](#api-documentation)
 - [Development](#development)
 - [Testing](#testing)
@@ -242,8 +244,31 @@ AI-Powered-Resume-Screening/
 │
 └── scripts/                   # Utility scripts
     ├── setup.sh              # Setup script
-    └── run_dev.sh           # Development server script
+    ├── run_dev.sh           # Development server script
+    └── azure_setup.sh       # Azure deployment script
 ```
+
+---
+
+## ⚡ Quick Start
+
+Get started in 5 minutes! See [QUICKSTART.md](QUICKSTART.md) for detailed guide.
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+
+# 2. Run the app
+streamlit run frontend/streamlit_app.py
+
+# 3. Test with sample data
+# - Upload resumes from data/sample_resumes/
+# - Use job descriptions from data/sample_jds/
+# - View AI-powered match results!
+```
+
+**Access the app:** http://localhost:8501
 
 ---
 
@@ -382,6 +407,48 @@ streamlit run frontend/streamlit_app.py
 5. **Track Progress**
    - Monitor interview statuses
    - View analytics and insights
+
+---
+
+## ☁️ Azure Deployment
+
+Deploy to Azure App Service in minutes! See [AZURE_DEPLOYMENT.md](AZURE_DEPLOYMENT.md) for complete guide.
+
+### Quick Deploy
+
+```bash
+# Run automated setup script
+chmod +x scripts/azure_setup.sh
+./scripts/azure_setup.sh
+```
+
+Or deploy manually:
+
+```bash
+# 1. Create Azure resources
+az group create --name rg-resume-screener --location eastus
+az appservice plan create --name plan-resume-screener --resource-group rg-resume-screener --is-linux --sku B1
+az webapp create --resource-group rg-resume-screener --plan plan-resume-screener --name ai-resume-screener --runtime "PYTHON:3.10"
+
+# 2. Configure environment variables
+az webapp config appsettings set --resource-group rg-resume-screener --name ai-resume-screener \
+  --settings AZURE_OPENAI_ENDPOINT="YOUR_ENDPOINT" AZURE_OPENAI_API_KEY="YOUR_KEY"
+
+# 3. Deploy code
+az webapp up --name ai-resume-screener --resource-group rg-resume-screener
+```
+
+**Features:**
+- ✅ Docker container support
+- ✅ Auto-scaling capabilities
+- ✅ CI/CD with GitHub Actions
+- ✅ Application Insights monitoring
+- ✅ HTTPS enabled by default
+
+**Deployment Options:**
+1. **Azure App Service** (Recommended) - See [AZURE_DEPLOYMENT.md](AZURE_DEPLOYMENT.md)
+2. **Docker Container** - Use provided `Dockerfile`
+3. **GitHub Actions** - CI/CD workflow in `.github/workflows/azure-deploy.yml`
 
 ---
 

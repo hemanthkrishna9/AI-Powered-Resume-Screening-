@@ -1,0 +1,55 @@
+# Git files
+.git
+.gitignore
+.github
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (will be created in container)
+data/resumes/*.pdf
+data/resumes/*.docx
+data/vector_db/*
+*.db
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Credentials
+.env
+credentials/
+
+# Documentation
+docs/
+README.md
+QUICKSTART.md
+
+# Tests
+tests/
+*.test.py
+.pytest_cache/
+
+# Misc
+*.bak
+*.backup
+.cache/
