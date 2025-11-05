@@ -3,8 +3,17 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg)](https://fastapi.tiangolo.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-FF4B4B.svg)](https://streamlit.io/)
 
 > An intelligent end-to-end AI hiring assistant that automates resume screening, candidate ranking, and interview scheduling for recruiters.
+
+## 🚀 Quick Deploy (100% FREE!)
+
+Deploy this app in **5 minutes** on **Streamlit Cloud** - no credit card required!
+
+**👉 [Follow the Deployment Guide](STREAMLIT_CLOUD_DEPLOY.md)** 👈
+
+**Live Demo:** Coming soon!
 
 ---
 
