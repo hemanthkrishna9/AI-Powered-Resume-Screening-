@@ -15,10 +15,6 @@ ROOT_DIR = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
 # Import components
-from src.resume_parser.parser import ResumeParser
-from src.resume_parser.extractor import DataExtractor
-from src.ai_matcher.matcher import ResumeMatcher
-from src.ai_matcher.ranker import CandidateRanker
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
