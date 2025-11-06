@@ -33,138 +33,200 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for beautiful modern UI
+# Custom CSS for beautiful modern UI - Streamlit Cloud optimized
 def load_css():
     st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-    /* Global styling */
-    * {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* === GLOBAL FIXES === */
+    .main .block-container {
+        padding: 2rem 1rem 3rem 1rem !important;
+        max-width: 100% !important;
     }
 
-    /* Main app background */
+    /* Main app background - CRITICAL */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     }
 
-    .main {
-        background: transparent;
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
     }
 
-    /* Content area - Clean white card */
-    .block-container {
-        padding: 3rem 2rem !important;
-        background: rgba(255, 255, 255, 0.98);
-        border-radius: 24px;
-        margin: 2rem auto !important;
-        max-width: 1400px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(10px);
+    /* === TYPOGRAPHY === */
+    * {
+        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     }
 
-    /* Headers with modern gradient */
-    h1 {
-        color: transparent !important;
-        font-weight: 800 !important;
-        font-size: 3.5rem !important;
-        text-align: center;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Headers */
+    .main h1 {
+        color: #FFFFFF !important;
+        font-weight: 900 !important;
+        font-size: 3rem !important;
+        text-align: center !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.3) !important;
+        margin: 1rem 0 !important;
+        padding: 1.5rem 0 !important;
+        background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
-        background-clip: text;
-        margin-bottom: 0.5rem !important;
-        letter-spacing: -1px;
     }
 
-    h2 {
+    .main h2 {
         color: #1e293b !important;
         font-weight: 700 !important;
-        font-size: 2rem !important;
-        margin-top: 2.5rem !important;
-        margin-bottom: 1rem !important;
+        font-size: 1.75rem !important;
+        margin: 2rem 0 1rem 0 !important;
+        padding-bottom: 0.5rem !important;
+        border-bottom: 3px solid #667eea !important;
     }
 
-    h3 {
-        color: #334155 !important;
+    .main h3 {
+        color: #475569 !important;
         font-weight: 600 !important;
-        font-size: 1.5rem !important;
-        margin-top: 1.5rem !important;
+        font-size: 1.35rem !important;
+        margin: 1.5rem 0 0.75rem 0 !important;
     }
 
-    /* Subtitle */
-    .subtitle {
-        text-align: center;
-        color: #64748b;
-        font-size: 1.25rem;
-        margin-bottom: 3rem;
-        font-weight: 400;
-        line-height: 1.6;
+    /* === BUTTONS - HUGE & PROMINENT === */
+    button[kind="primary"], button[kind="secondary"], .stButton > button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
+        font-weight: 700 !important;
+        padding: 1rem 3rem !important;
+        border-radius: 50px !important;
+        border: none !important;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4) !important;
+        transition: all 0.3s ease !important;
+        font-size: 1.1rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
     }
 
-    /* Metric cards - Modern glassmorphism */
+    button[kind="primary"]:hover, button[kind="secondary"]:hover, .stButton > button:hover {
+        transform: translateY(-3px) scale(1.05) !important;
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6) !important;
+    }
+
+    /* === CUSTOM CARDS === */
     .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem 1.5rem;
-        border-radius: 20px;
-        color: white;
-        box-shadow: 0 20px 40px -12px rgba(102, 126, 234, 0.4);
-        text-align: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        padding: 2.5rem 2rem !important;
+        border-radius: 20px !important;
+        color: white !important;
+        box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4) !important;
+        text-align: center !important;
+        transition: transform 0.3s ease !important;
     }
 
     .metric-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.6);
+        transform: translateY(-10px) scale(1.03) !important;
+        box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6) !important;
     }
 
     .metric-value {
-        font-size: 3rem;
-        font-weight: 800;
-        margin: 0.5rem 0;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 3.5rem !important;
+        font-weight: 900 !important;
+        margin: 1rem 0 !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.2) !important;
     }
 
     .metric-label {
-        font-size: 0.95rem;
-        opacity: 0.95;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        font-weight: 600;
+        font-size: 1rem !important;
+        opacity: 0.95 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-weight: 700 !important;
     }
 
-    /* Buttons - Modern with hover effects */
-    .stButton>button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    .candidate-card {
+        background: white !important;
+        border-left: 6px solid #667eea !important;
+        padding: 2.5rem !important;
+        margin: 2rem 0 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .candidate-card:hover {
+        transform: translateX(15px) !important;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18) !important;
+        border-left-width: 10px !important;
+    }
+
+    /* === MATCH SCORE BADGES - BOLD === */
+    .match-score {
+        display: inline-block !important;
+        padding: 0.75rem 1.5rem !important;
+        border-radius: 30px !important;
+        font-weight: 900 !important;
+        font-size: 1.3rem !important;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+        letter-spacing: 1px !important;
+        text-transform: uppercase !important;
+    }
+
+    .score-excellent {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
         color: white !important;
-        font-weight: 600 !important;
-        padding: 0.875rem 2.5rem !important;
+    }
+
+    .score-good {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+        color: white !important;
+    }
+
+    .score-moderate {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+        color: white !important;
+    }
+
+    .score-weak {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+        color: white !important;
+    }
+
+    /* === SKILL TAGS - COLORFUL === */
+    .skill-tag {
+        display: inline-block !important;
+        background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%) !important;
+        color: #4338ca !important;
+        padding: 0.6rem 1.2rem !important;
+        margin: 0.4rem !important;
+        border-radius: 25px !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        box-shadow: 0 4px 12px rgba(67, 56, 202, 0.2) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .skill-tag:hover {
+        transform: translateY(-4px) scale(1.1) !important;
+        box-shadow: 0 8px 20px rgba(67, 56, 202, 0.35) !important;
+    }
+
+    /* === STREAMLIT COMPONENTS === */
+    .stTextArea textarea, .stTextInput input {
         border-radius: 12px !important;
-        border: none !important;
-        box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.5) !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        font-size: 1.05rem !important;
-        letter-spacing: 0.3px !important;
+        border: 3px solid #cbd5e1 !important;
+        font-size: 1rem !important;
+        padding: 1rem !important;
+        transition: all 0.3s ease !important;
+        background: white !important;
     }
 
-    .stButton>button:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 15px 35px -5px rgba(102, 126, 234, 0.7) !important;
+    .stTextArea textarea:focus, .stTextInput input:focus {
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15) !important;
     }
 
-    .stButton>button:active {
-        transform: translateY(-1px) !important;
-    }
-
-    /* File uploader - Modern style */
     .stFileUploader {
         background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
         border-radius: 16px !important;
-        padding: 2.5rem !important;
-        border: 2px dashed #cbd5e1 !important;
-        transition: all 0.3s !important;
+        padding: 3rem !important;
+        border: 3px dashed #cbd5e1 !important;
     }
 
     .stFileUploader:hover {
@@ -172,212 +234,119 @@ def load_css():
         background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
     }
 
-    /* Text area - Clean design */
-    .stTextArea textarea {
-        border-radius: 12px !important;
-        border: 2px solid #e2e8f0 !important;
-        font-size: 1rem !important;
-        padding: 1rem !important;
-        transition: all 0.3s !important;
-    }
-
-    .stTextArea textarea:focus {
-        border-color: #667eea !important;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
-    }
-
-    /* Tabs - Modern style */
+    /* === TABS === */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 0.5rem;
-        background: transparent;
+        gap: 1rem !important;
     }
 
     .stTabs [data-baseweb="tab"] {
-        border-radius: 12px;
-        padding: 0.875rem 2rem;
-        font-weight: 600;
-        background: #f8fafc;
-        border: 2px solid transparent;
-        transition: all 0.3s;
-    }
-
-    .stTabs [data-baseweb="tab"]:hover {
-        background: #f1f5f9;
-        border-color: #e2e8f0;
+        border-radius: 12px !important;
+        padding: 1rem 2rem !important;
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+        background: #f1f5f9 !important;
+        border: 2px solid transparent !important;
     }
 
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
+        border-color: #667eea !important;
     }
 
-    /* Alert boxes - Modern design */
+    /* === ALERTS === */
     .stSuccess, .stInfo, .stWarning, .stError {
         border-radius: 12px !important;
-        padding: 1.25rem !important;
-        border: none !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        padding: 1.5rem !important;
+        font-weight: 600 !important;
+        font-size: 1rem !important;
     }
 
-    /* Candidate card - Beautiful elevation */
-    .candidate-card {
-        background: white;
-        border-left: 5px solid #667eea;
-        padding: 2rem;
-        margin: 1.5rem 0;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid #f1f5f9;
-    }
-
-    .candidate-card:hover {
-        transform: translateX(8px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        border-left-width: 8px;
-    }
-
-    /* Progress bar */
-    .stProgress > div > div {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
-        border-radius: 10px !important;
-    }
-
-    /* Sidebar - Dark elegant */
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%) !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    [data-testid="stSidebar"] * {
+    /* === SIDEBAR STYLING === */
+    section[data-testid="stSidebar"] * {
         color: #e2e8f0 !important;
     }
 
-    [data-testid="stSidebar"] .stRadio > label {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.75rem 1rem;
-        border-radius: 10px;
-        margin: 0.25rem 0;
-        transition: all 0.3s;
+    section[data-testid="stSidebar"] .stRadio label {
+        background: rgba(255, 255, 255, 0.08) !important;
+        padding: 1rem !important;
+        border-radius: 12px !important;
+        margin: 0.5rem 0 !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
     }
 
-    [data-testid="stSidebar"] .stRadio > label:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateX(5px);
+    section[data-testid="stSidebar"] .stRadio label:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        transform: translateX(8px) !important;
     }
 
-    /* Match score badges - Eye-catching */
-    .match-score {
-        display: inline-block;
-        padding: 0.625rem 1.25rem;
-        border-radius: 25px;
-        font-weight: 700;
-        font-size: 1.125rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        letter-spacing: 0.5px;
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {
+        color: white !important;
     }
 
-    .score-excellent {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        color: white;
+    /* === PROGRESS BAR === */
+    .stProgress > div > div {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+        border-radius: 10px !important;
+        height: 12px !important;
     }
 
-    .score-good {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-        color: white;
-    }
-
-    .score-moderate {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        color: white;
-    }
-
-    .score-weak {
-        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-        color: white;
-    }
-
-    /* Skill tags - Modern pills */
-    .skill-tag {
-        display: inline-block;
-        background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-        color: #4338ca;
-        padding: 0.5rem 1rem;
-        margin: 0.3rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        box-shadow: 0 2px 8px rgba(67, 56, 202, 0.15);
-        transition: all 0.3s;
-    }
-
-    .skill-tag:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
-    }
-
-    /* Expander - Clean design */
+    /* === EXPANDERS === */
     .streamlit-expanderHeader {
         background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
         border-radius: 12px !important;
-        font-weight: 600 !important;
-        padding: 1rem 1.5rem !important;
-        border: 1px solid #e2e8f0 !important;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        padding: 1.2rem 1.5rem !important;
+        border: 2px solid #e2e8f0 !important;
     }
 
     .streamlit-expanderHeader:hover {
-        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%) !important;
-        border-color: #cbd5e1 !important;
+        background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 100%) !important;
+        border-color: #667eea !important;
     }
 
-    /* Metrics - Streamlit native */
+    /* === METRICS (Streamlit native) === */
     [data-testid="stMetricValue"] {
-        font-size: 2rem !important;
-        font-weight: 700 !important;
+        font-size: 2.5rem !important;
+        font-weight: 900 !important;
         color: #667eea !important;
     }
 
     [data-testid="stMetricLabel"] {
-        font-size: 0.95rem !important;
-        font-weight: 600 !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
         color: #64748b !important;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
     }
 
-    /* Footer - Elegant */
-    .footer {
-        text-align: center;
-        color: #94a3b8;
-        padding: 2.5rem;
-        font-size: 0.95rem;
-        margin-top: 4rem;
-        border-top: 2px solid #f1f5f9;
-        font-weight: 500;
+    /* === HIDE STREAMLIT BRANDING === */
+    #MainMenu {visibility: hidden !important;}
+    footer {visibility: hidden !important;}
+    header {visibility: hidden !important;}
+
+    /* === CUSTOM SCROLLBAR === */
+    ::-webkit-scrollbar {
+        width: 10px !important;
+        height: 10px !important;
     }
 
-    /* Input fields */
-    .stTextInput input, .stNumberInput input, .stSelectbox select {
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9 !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         border-radius: 10px !important;
-        border: 2px solid #e2e8f0 !important;
-        padding: 0.75rem !important;
-        transition: all 0.3s !important;
     }
 
-    .stTextInput input:focus, .stNumberInput input:focus, .stSelectbox select:focus {
-        border-color: #667eea !important;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%) !important;
     }
-
-    /* Slider */
-    .stSlider [data-baseweb="slider"] {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
-    }
-
-    /* Remove Streamlit branding */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
     </style>
     """, unsafe_allow_html=True)
 
